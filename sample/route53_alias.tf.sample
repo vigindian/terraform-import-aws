@@ -1,0 +1,12 @@
+#if you use alias for your top domain name
+resource "aws_route53_record" "RNAME" {
+  zone_id = "${aws_route53_zone.example.zone_id}"
+  name    = "FULLNAME"
+  type    = "TYPE"
+
+  alias {
+  	evaluate_target_health = false
+  	name                   = "elb-web-5171abcd.ap-southeast-2.elb.amazonaws.com"
+  	zone_id                = "Z6HAGAJAG123"
+        }
+}

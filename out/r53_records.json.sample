@@ -1,0 +1,74 @@
+{           
+    "ResourceRecordSets": [
+	{
+            "Name": "example.com.",
+            "Type": "NS",
+            "TTL": 172800,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-1234.awsdns-30.co.uk."
+                },
+                {
+                    "Value": "ns-2468.awsdns-60.org."
+                },
+                {
+                    "Value": "ns-123.awsdns-20.net."
+                },
+                {
+                    "Value": "ns-456.awsdns-40.com."
+                }
+            ]
+        },
+    	{
+            "Name": "api.example.com.",
+            "Type": "CNAME",
+            "TTL": 3600,
+            "ResourceRecords": [
+                {
+                    "Value": "alb-api-123456.ap-southeast-2.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "example.com.",
+            "Type": "SOA",
+            "TTL": 900,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-1234.awsdns-30.co.uk. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+                }
+            ]
+        },
+        {
+            "Name": "example.com.",
+            "Type": "CAA",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "0 issuewild \"awstrust.com\""
+                },
+                {
+                    "Value": "0 issuewild \"amazon.com\""
+                },
+                {
+                    "Value": "0 issuewild \"amazonaws.com\""
+                },
+                {
+                    "Value": "0 issue \"amazontrust.com\""
+                },
+                {
+                    "Value": "0 issuewild \"amazontrust.com\""
+                },
+                {
+                    "Value": "0 issue \"amazon.com\""
+                },
+                {
+                    "Value": "0 issue \"amazonaws.com\""
+                },
+                {
+                    "Value": "0 issue \"awstrust.com\""
+                }
+            ]
+        }
+    ]
+}

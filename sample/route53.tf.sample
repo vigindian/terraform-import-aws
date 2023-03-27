@@ -1,0 +1,10 @@
+resource "aws_route53_record" "RNAME" {
+  #hard-code or import zone-first
+  zone_id = "${aws_route53_zone.example.zone_id}"
+  name    = "FULLNAME"
+  type    = "TYPE"
+  records = [
+	"RECORDS",
+  ]
+  ttl = TTL
+}

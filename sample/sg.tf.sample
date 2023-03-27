@@ -1,0 +1,9 @@
+resource "aws_security_group" "SGNAME" {
+  name = "SGNAME"
+  vpc_id = "${aws_vpc.vpc1.id}"
+  description = "SGDESC"
+  tags = {
+    Environment = "${var.environment_tag}"
+    Name = "${var.sg_common}"
+  }
+}

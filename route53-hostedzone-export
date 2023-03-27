@@ -1,0 +1,1 @@
+aws route53 list-resource-record-sets --hosted-zone-id AWSR53HOSTEDZONEID --output json > out/r53_records.json
